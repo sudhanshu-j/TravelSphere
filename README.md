@@ -78,20 +78,20 @@ Check out the live version of TravelSphere: [Live Demo URL](#)
 ## Screenshots
 
 ### Hero Section
-![Hero Section]([assets/ScreenShots/hero-section.png])
 
 ![hero-section](https://github.com/user-attachments/assets/f143d460-3474-425d-b1e2-7477edb9ab45)
 
 ### Services Section
 
-
-![Services Section](images/services-section.png)
+![services-section](https://github.com/user-attachments/assets/9cf7e203-1780-4077-9fc1-fbcd66ae4777)
 
 ### Experience Section
-![Experience Section](images/experience-section.png)
+
+![experience-section](https://github.com/user-attachments/assets/63aa08ea-9b49-4c17-8a12-5de4fac4c68b)
 
 ### Photo Gallery
-![Photo Gallery](images/photo-gallery.png)
+
+![photo-gallery](https://github.com/user-attachments/assets/1130e53f-ed5e-459b-83f2-f7c941dc312a)
 
 ## Installation
 
