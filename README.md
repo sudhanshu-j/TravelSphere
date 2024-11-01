@@ -80,7 +80,11 @@ Check out the live version of TravelSphere: [Live Demo URL](#)
 ### Hero Section
 ![Hero Section]([assets/ScreenShots/hero-section.png])
 
+![hero-section](https://github.com/user-attachments/assets/f143d460-3474-425d-b1e2-7477edb9ab45)
+
 ### Services Section
+
+
 ![Services Section](images/services-section.png)
 
 ### Experience Section
