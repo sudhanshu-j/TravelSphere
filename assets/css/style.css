@@ -148,7 +148,7 @@ body.nav-active {
 
 /* Reused Styles */
 .container {
-  padding-inline: 16px; /* Horizontal padding for container */
+  padding-inline: 12px; /* Horizontal padding for container */
 }
 
 .btn {
@@ -242,6 +242,10 @@ title {
     --bg-gainsboro
   ); /* Background color for image holders */
   overflow: hidden; /* Hide overflow for contained elements */
+}
+
+.toggle-btn {
+  font-size: 2.5rem;
 }
 
 /* Preloader */
@@ -340,20 +344,16 @@ title {
   width: 160px; /* Fixed width for logo image */
 }
 
-.toggle-btn {
-  font-size: 3rem; /* Large font size for toggle button */
-}
-
 /* Navigation */
 .nav-bar {
   position: fixed; /* Fixed positioning for navigation */
   top: 0; /* Align to top */
-  right: -350px; /* Start off-screen to the right */
-  max-width: 350px; /* Maximum width for navigation */
+  right: -300px; /* Start off-screen to the right */
+  max-width: 300px; /* Maximum width for navigation */
   width: 100%; /* Full width */
   height: 100vh; /* Full viewport height */
   background-color: var(--bg-white); /* Background color */
-  padding: 30px 16px; /* Padding inside navigation */
+  padding: 20px 10px; /* Padding inside navigation */
   display: flex; /* Use flexbox layout */
   flex-direction: column; /* Stack items vertically */
   z-index: 1; /* Layer above other elements */
@@ -363,16 +363,15 @@ title {
 
 .nav-bar.active {
   visibility: visible; /* Show when active */
-  transform: translateX(-350px); /* Move into view */
+  transform: translateX(-300px); /* Move into view */
   transition-duration: 0.5s; /* Duration of the transition */
 }
 
 .nav-top {
-  display: flex; /* Use flexbox for top navigation layout */
+  display: flex; /* Display when the navigation is visible */
   justify-content: space-between; /* Space items evenly */
   align-items: center; /* Center items vertically */
 }
-
 
 .nav-list {
   margin-block-start: 50px; /* Top margin for navigation list */
@@ -838,6 +837,22 @@ title {
 
 /* 1. Basic Structure for Smaller Screens (Default) */
 /* No specific styles defined; styles are applied by default for screens smaller than 580px. */
+
+/* 1.1. Basic Structure for Medium Screens (480px) */
+@media (max-width: 480px) {
+  /* Styles for screens smaller than 480px */
+
+  /* Container styles */
+  .container {
+    max-width: 380px; /* Limit container width */
+    width: 100%; /* Full width */
+    margin-inline: auto; /* Center container */
+  }
+  /* Header styles */
+  .header {
+    padding: 1rem; /* Add padding */
+  }
+}
 
 /* 2. Screens Larger than 580px */
 @media (min-width: 580px) {
