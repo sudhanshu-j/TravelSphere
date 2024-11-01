@@ -95,11 +95,11 @@ Check out the live version of TravelSphere: [Live Demo URL](#)
 
 To install the project, follow these steps:
 1. Clone the repository:
-   ```bash
-  git clone https://github.com/your-username/travelsphere.git
 
-2. Open the project folder:
-    ```bash
-  cd TravelSphere
-    ```
-3. Open `index.html` in your browser to view the website.
+   git clone https://github.com/your-username/travelsphere.git
+
+3. Open the project folder:
+
+    cd TravelSphere
+  
+5. Open `index.html` in your browser to view the website.
