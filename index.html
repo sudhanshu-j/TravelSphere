@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the character encoding for the document to UTF-8, which supports most characters and symbols -->
+    <meta charset="UTF-8" />
+
+    <!-- Set the viewport settings for responsive design; this ensures the page is scaled correctly on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title of the webpage, displayed in the browser tab -->
+    <title>TravelSphere</title>
+
+    <!-- Link to the favicon (small icon in the browser tab) -->
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+
+    <!-- Link to Font Awesome library for using icons in the website -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- Link to the main CSS stylesheet for styling the webpage -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Preload images to improve performance by fetching them early -->
+    <link rel="preload" as="image" href="/assets/images/hero-banner.png" />
+    <link rel="preload" as="image" href="/preloader.png" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" data-preloader>
+      <!-- Outer container for the preloader, which can be styled and controlled with JavaScript using the 'data-preloader' attribute -->
+      <div class="preloader-inner">
+        <!-- Inner container for the preloader content -->
+        <img
+          src="/preloader.png"
+          width="50"
+          height="50"
+          alt=""
+          class="preloader-img"
+        />
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" data-header>
+      <!-- The main header element for the website, containing the logo and navigation. -->
+
+      <div class="container">
+        <!-- A container to center the content and set a maximum width. -->
+
+        <a href="#" class="logo">
+          <!-- The logo link that typically redirects to the homepage. -->
+          <img
+            src="/assets/images/logo.svg"
+            width="187"
+            height="38"
+            alt="logo"
+            class="logo-img"
+          />
+          <!-- The logo image itself. The `alt` attribute describes the image for accessibility. -->
+        </a>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar" data-navbar>
+          <!-- The navigation bar that contains links to different sections of the website. -->
+
+          <div class="nav-top">
+            <!-- The top part of the navigation, usually includes the logo and a close button. -->
+
+            <a href="#" class="logo">
+              <!-- Logo in the navigation menu, redirecting to the homepage. -->
+              <img
+                src="/assets/images/logo.svg"
+                width="187"
+                height="38"
+                alt="logo"
+                class="logo-img"
+              />
+              <!-- Logo image for the navigation. -->
+            </a>
+
+            <button class="toggle-btn" aria-label="close menu" data-nav-toggler>
+              <!-- A button to close the navigation menu, for accessibility it includes an `aria-label`. -->
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- A button to close the navigation menu, for accessibility it includes an `aria-label`. 
+              <i class="fa-solid fa-xmark"></i>
+               An icon representing the close action (from Font Awesome). -->
+
+          <ul class="nav-list">
+            <!-- An unordered list to contain the navigation links. -->
+
+            <li class="nav-item">
+              <!-- A list item for each navigation link. -->
+              <a href="#home" class="nav-link">Home</a>
+              <!-- A link to the home section of the website. -->
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link">About</a>
+              <!-- A link to the about section. -->
+            </li>
+            <li class="nav-item">
+              <a href="#service" class="nav-link">Services</a>
+              <!-- A link to the services section. -->
+            </li>
+            <li class="nav-item">
+              <a href="#destinations" class="nav-link">Pricing</a>
+              <!-- A link to the pricing section. -->
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+              <!-- A link to the contact section. -->
+            </li>
+          </ul>
+
+          <div class="header-action">
+            <!-- A container for action buttons like login and sign up. -->
+
+            <a href="#" class="login-btn">
+              <!-- A link styled as a button for logging in. -->
+              <i class="fa-solid fa-sign-in"></i> Login
+              <!-- An icon representing the login action (from Font Awesome). -->
+            </a>
+
+            <a href="#" class="btn btn-primary">
+              <!-- A primary button link for signing up. -->
+              <i class="fa-solid fa-user-plus"></i> Sign Up
+              <!-- An icon representing the sign-up action (from Font Awesome). -->
+            </a>
+          </div>
+        </nav>
+
+        <button class="toggle-btn" aria-label="open menu" data-nav-toggler>
+          <!-- A button to open the navigation menu, includes an `aria-label` for accessibility. -->
+          <i class="fa-solid fa-bars-staggered"></i>
+          <!-- An icon representing the open menu action (from Font Awesome). -->
+        </button>
+
+        <div class="overlay" data-overlay data-nav-toggler></div>
+        <!-- An overlay that covers the screen when the navigation menu is open, allowing for a better user experience. -->
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <article>
+        <!-- Hero Section -->
+        <section class="section hero bg-img" aria-label="hero" id="home">
+          <!-- The <section> element defines a section of the document,
+             typically with a thematic grouping of content.
+             This particular section is styled as a hero section with a background image. -->
+
+          <div class="container">
+            <!-- A container to center and constrain the width of the content within the section. -->
+
+            <div class="hero-content">
+              <!-- A wrapper for the main content of the hero section, allowing for layout control. -->
+
+              <p class="hero-subtitle">
+                <!-- A paragraph element for the subtitle of the hero section. -->
+                Unlock the magic of travel with TravelSphere.
+                <img
+                  src="/assets/images/title-icon.svg"
+                  width="20"
+                  height="20"
+                  class="img"
+                  alt="title icon"
+                />
+                <!-- An icon image related to the title, enhancing visual interest. -->
+              </p>
+
+              <h1 class="h1 hero-title title">
+                <!-- The main heading of the hero section, usually the most important text. -->
+                Discover the hidden gems of the world.
+              </h1>
+
+              <p class="hero-text">
+                <!-- A paragraph providing more information about the service or theme of the section. -->
+                TravelSphere is a travel agency that offers exclusive deals and
+                exclusive access to all of the secrets of travel.
+              </p>
+
+              <div class="wrapper">
+                <!-- A wrapper for action buttons to maintain layout consistency. -->
+
+                <a href="#" class="btn btn-secondary">
+                  <!-- A link styled as a button for exploration, prompting user action. -->
+                  Explore Now
+                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                  <!-- An icon indicating an action (Font Awesome), hidden from screen readers for accessibility. -->
+                </a>
+
+                <button class="hero-btn">
+                  <!-- A button that offers a different interaction, such as watching a story. -->
+                  <div class="btn-img">
+                    <!-- A wrapper for the button's image and icon. -->
+                    <img
+                      src="/assets/images/hero-button-img.jpg"
+                      alt="story image"
+                      class="img-cover"
+                      width="100"
+                      height="100"
+                    />
+                    <!-- An image related to the story being highlighted, contributing to the button's visual appeal. -->
+
+                    <i class="fa-solid fa-play" aria-hidden="true"></i>
+                    <!-- An icon indicating play, hidden from screen readers for accessibility. -->
+                  </div>
+
+                  <p class="text">Watch a story from our latest trip</p>
+                  <!-- Text describing the button's function. -->
+                </button>
+              </div>
+            </div>
+
+            <figure class="hero-banner">
+              <!-- A figure element for semantically grouping the hero banner image, often with a caption. -->
+              <img
+                src="/assets/images/hero-banner.png"
+                alt="hero banner"
+                class="w-100"
+                width="631"
+                height="753"
+              />
+              <!-- The main banner image of the hero section, visually supporting the content. -->
+            </figure>
+          </div>
+        </section>
+
+        <!-- Service Section -->
+        <section class="section service" aria-label="service" id="service">
+          <!-- The <section> element groups related content about services provided,
+               with an aria-label for accessibility and an id for linking. -->
+
+          <div class="container">
+            <!-- A container to center and constrain the content width within the section. -->
+
+            <div class="title-wrapper">
+              <!-- A wrapper for the title elements to maintain layout structure. -->
+
+              <p class="section-subtitle">Our services for you</p>
+              <!-- A subtitle that introduces the section, enhancing the context for users. -->
+
+              <h2 class="h2 title section-title">Top Values For You</h2>
+              <!-- The main heading of the section, highlighting the key message. -->
+
+              <p class="section-text">
+                <!-- A paragraph that provides more detail about the services offered. -->
+                TravelSphere offers a wide range of services to help you plan
+                and organize your perfect trip. From accommodations to
+                transportation, food and beverages, we've got you.
+              </p>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-card">
+              <!-- Each service card presents a specific service offered. -->
+
+              <div class="service-icon">
+                <!-- A container for the service icon image, enhancing the visual appeal. -->
+                <img
+                  src="/assets/images/service-icon-1.svg"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                  alt="icon"
+                />
+                <!-- An icon representing the service, with loading attribute to improve performance. -->
+              </div>
+
+              <h3 class="h3 title card-title">Lot Of Choices</h3>
+              <!-- The title of the service card, summarizing the service offered. -->
+
+              <p class="card-text">
+                <!-- A paragraph providing detailed information about the service. -->
+                TravelSphere has a wide selection of accommodations, from
+                budget-friendly options to luxury hotels, to help you find the
+                perfect place to stay. We also offer room upgrades and
+                discounts.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <!-- Another service card for a different service. -->
+              <div class="service-icon">
+                <img
+                  src="/assets/images/service-icon-2.svg"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                  alt="icon"
+                />
+              </div>
+
+              <h3 class="h3 title card-title">Best Tour Guide</h3>
+              <p class="card-text">
+                TravelSphere's expert tours guide you through the most popular
+                destinations around the world. We offer personalized tours and
+                expertise to help you make the most of your trip.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <!-- A third service card for another service. -->
+              <div class="service-icon">
+                <img
+                  src="/assets/images/service-icon-3.svg"
+                  width="60"
+                  height="60"
+                  loading="lazy"
+                  alt="icon"
+                />
+              </div>
+
+              <h3 class="h3 title card-title">Easy Booking</h3>
+              <p class="card-text">
+                TravelSphere offers easy booking options for your
+                accommodations, from booking directly on our website to booking
+                through travel agents or hotels. We also offer room upgrades and
+                discounts.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Destinations Section -->
+        <section
+          class="section destinations"
+          aria-label="destinations"
+          id="destinations"
+        >
+          <!-- The <section> element groups related content about travel destinations,
+               with an aria-label for accessibility and an id for linking. -->
+
+          <div class="container">
+            <!-- A container to center and constrain the content width within the section. -->
+
+            <p class="section-subtitle">Our destinations for you</p>
+            <!-- A subtitle that introduces the section, providing context to users. -->
+
+            <h2 class="h2 title section-title">
+              <!-- The main heading of the section, emphasizing the exploration theme. -->
+              Explore the world's hidden gems one day at a time.
+            </h2>
+
+            <ul class="destinations-list">
+              <!-- An unordered list to display the various travel destinations. -->
+
+              <!-- 1 -->
+              <li>
+                <!-- Each list item represents a destination card. -->
+                <div class="destinations-card destinations-card-1">
+                  <!-- A card that encapsulates all content related to a specific destination. -->
+
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <!-- A banner for the destination image, with CSS variables for responsive sizing. -->
+                    <img
+                      src="/assets/images/desti-1.jpg"
+                      alt="destinations"
+                      class="img-cover"
+                      width="600"
+                      height="650"
+                      loading="lazy"
+                    />
+                    <!-- The destination image, with the loading attribute for performance optimization. -->
+
+                    <span class="card-price">
+                      <!-- A container for the destination price. -->
+                      <span class="price">$1,200</span>
+                      <!-- The price of the destination package. -->
+                    </span>
+                  </div>
+
+                  <div class="card-content">
+                    <!-- A container for the content related to the destination. -->
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        <!-- A link styled as a title for the destination, allowing for interaction. -->
+                        Enjoy the beauty of the Grand Canal
+                      </a>
+                    </h3>
+
+                    <address class="card-text">Venice, Italy</address>
+                    <!-- An address element providing the location of the destination. -->
+
+                    <div class="card-rating">
+                      <!-- A container for displaying the rating of the destination. -->
+                      <span class="span">
+                        <i class="fa-solid fa-star"></i>
+                        4.7
+                        <!-- A star icon indicating the rating (Font Awesome). -->
+                      </span>
+
+                      <p class="rating-text">(11.1k Review)</p>
+                      <!-- A paragraph displaying the number of reviews. -->
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- 2 -->
+              <li>
+                <div class="destinations-card destinations-card-2">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="/assets/images/desti-2.jpg"
+                      alt="destinations"
+                      class="img-cover"
+                      width="600"
+                      height="650"
+                      loading="lazy"
+                    />
+                    <span class="card-price">
+                      <span class="price">$1,500</span>
+                    </span>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Enjoy the Beauty of the Udaipur City Palace
+                      </a>
+                    </h3>
+
+                    <address class="card-text">Rajasthan, India.</address>
+
+                    <div class="card-rating">
+                      <span class="span">
+                        <i class="fa-solid fa-star"></i>
+                        4.7
+                      </span>
+
+                      <p class="rating-text">(11.1k Review)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- 3 -->
+              <li>
+                <div class="destinations-card destinations-card-3">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="/assets/images/desti-3.jpg"
+                      alt="destinations"
+                      class="img-cover"
+                      width="600"
+                      height="650"
+                      loading="lazy"
+                    />
+                    <span class="card-price">
+                      <span class="price"> $800 </span>
+                    </span>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Enjoy the Beauty of Istanbul
+                      </a>
+                    </h3>
+
+                    <address class="card-text">Istanbul, Türkiye</address>
+
+                    <div class="card-rating">
+                      <span class="span">
+                        <i class="fa-solid fa-star"></i>
+                        4.7
+                      </span>
+
+                      <p class="rating-text">(11.1k Review)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- 4 -->
+              <li>
+                <div class="destinations-card destinations-card-4">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="/assets/images/desti-4.jpg"
+                      alt="destinations"
+                      class="img-cover"
+                      width="600"
+                      height="650"
+                      loading="lazy"
+                    />
+                    <span class="card-price">
+                      <span class="price">$1,000</span>
+                    </span>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Enjoy the Beauty of the Basílica de la Sagrada Familia
+                      </a>
+                    </h3>
+
+                    <address class="card-text">Barcelona, Spain</address>
+
+                    <div class="card-rating">
+                      <span class="span">
+                        <i class="fa-solid fa-star"></i>
+                        4.7
+                      </span>
+
+                      <p class="rating-text">(11.1k Review)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- 5 -->
+              <li>
+                <div class="destinations-card destinations-card-5">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="/assets/images/desti-5.jpg"
+                      alt="destinations"
+                      class="img-cover"
+                      width="600"
+                      height="650"
+                      loading="lazy"
+                    />
+                    <span class="card-price">
+                      <span class="price">$1,800</span>
+                    </span>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Enjoy the Beauty of the Burj Khalifa
+                      </a>
+                    </h3>
+
+                    <address class="card-text">
+                      Dubai, United Arab Emirates
+                    </address>
+
+                    <div class="card-rating">
+                      <span class="span">
+                        <i class="fa-solid fa-star"></i>
+                        4.7
+                      </span>
+
+                      <p class="rating-text">(11.1k Review)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- 6 -->
+              <li>
+                <div class="destinations-card destinations-card-6">
+                  <div
+                    class="card-banner img-holder"
+                    style="--width: 600; --height: 650"
+                  >
+                    <img
+                      src="/assets/images/desti-6.jpg"
+                      alt="destinations"
+                      class="img-cover"
+                      width="600"
+                      height="650"
+                      loading="lazy"
+                    />
+                    <span class="card-price">
+                      <span class="price">$2,000</span>
+                    </span>
+                  </div>
+
+                  <div class="card-content">
+                    <h3 class="h3 title">
+                      <a href="#" class="card-title">
+                        Enjoy the Beauty of the Kelingking Beach
+                      </a>
+                    </h3>
+
+                    <address class="card-text">Bali, Indonesia</address>
+
+                    <div class="card-rating">
+                      <span class="span">
+                        <i class="fa-solid fa-star"></i>
+                        4.7
+                      </span>
+
+                      <p class="rating-text">(11.1k Review)</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <a href="#" class="btn btn-primary"> Load More Destinations </a>
+            <!-- A button link for loading more destination options, encouraging user interaction. -->
+          </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section
+          class="experience section"
+          aria-label="experience"
+          id="experience"
+        >
+          <!-- The <section> element groups content related to user experiences,
+               with an aria-label for accessibility and an id for linking. -->
+
+          <div class="container">
+            <!-- A container to center and constrain the content width within the section. -->
+
+            <div class="experience-content">
+              <!-- A wrapper for the textual content related to experiences. -->
+
+              <p class="section-subtitle">Our Experiences</p>
+              <!-- A subtitle that introduces the section, indicating what follows. -->
+
+              <h2 class="h2 title section-title">Our Delightful Experiences</h2>
+              <!-- The main heading of the section, emphasizing the theme of delightful experiences. -->
+
+              <p class="section-text">
+                Since we first opened we have always prioritized the convenience
+                of our users by providing low prices and an easy process.
+              </p>
+              <!-- A descriptive paragraph explaining the focus on user convenience. -->
+
+              <ul class="experience-list">
+                <!-- An unordered list to display various experience highlights. -->
+
+                <!-- 1 -->
+                <li class="experience-item">
+                  <!-- Each list item represents a specific experience metric. -->
+                  <h3 class="h3 title item-title">20</h3>
+                  <!-- The number of years of experience, styled as a prominent title. -->
+                  <p class="item-text">
+                    Years Of <br />
+                    Experience
+                  </p>
+                  <!-- Text providing context to the number above, breaking into two lines for clarity. -->
+                </li>
+
+                <!-- 2 -->
+                <li class="experience-item">
+                  <h3 class="h3 title item-title">200+</h3>
+                  <!-- The number of hotels rated highly, styled similarly. -->
+                  <p class="item-text">
+                    Hotels <br />
+                    Rated 5+
+                  </p>
+                </li>
+
+                <!-- 3 -->
+                <li class="experience-item">
+                  <h3 class="h3 title item-title">10,000+</h3>
+                  <!-- The number of satisfied guests, again styled as a title. -->
+                  <p class="item-text">
+                    Guests <br />
+                    Satisfied
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <figure class="experience-banner">
+              <!-- A figure element to hold images related to experiences. -->
+              <img
+                src="/assets/images/experience-banner.png"
+                width="550"
+                height="660"
+                alt="experience banner"
+                class="w-100 banner-2"
+                loading="lazy"
+              />
+              <!-- The main banner image, illustrating the experience, optimized for loading. -->
+
+              <img
+                src="/assets/images/exp-shape.svg"
+                width="75"
+                height="109"
+                loading="lazy"
+                alt="experience shape banner"
+                class="experience-shape"
+              />
+              <!-- A decorative image (shape) that complements the main banner, also optimized for loading. -->
+            </figure>
+          </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery section" aria-label="gallery" id="gallery">
+          <!-- The <section> element groups the gallery content,
+               with an aria-label for accessibility and an id for linking. -->
+
+          <div class="container">
+            <!-- A container to center and constrain the content width within the section. -->
+
+            <p class="section-subtitle">Our Photo Gallery</p>
+            <!-- A subtitle introducing the gallery section. -->
+
+            <h2 class="h2 title section-title">
+              Check Out The Photos From Our Travelers
+            </h2>
+            <!-- The main heading of the section, encouraging users to view the photos. -->
+
+            <ul class="gallery-list">
+              <!-- An unordered list that holds the gallery items. -->
+
+              <!-- 1 -->
+              <li class="gallery-item gallery-item-1">
+                <!-- Each list item represents a photo in the gallery. -->
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 925"
+                >
+                  <img
+                    src="/assets/images/g-1.jpg"
+                    alt="gallery-1"
+                    width="700"
+                    height="925"
+                    loading="lazy"
+                    class="img-cover gallery-1-img"
+                  />
+                  <!-- The image element displays the first gallery photo, with lazy loading for performance. -->
+                </figure>
+              </li>
+
+              <!-- 2 -->
+              <li class="gallery-item gallery-item-2">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 925"
+                >
+                  <img
+                    src="/assets/images/g-2.jpg"
+                    alt="gallery-2"
+                    width="700"
+                    height="925"
+                    loading="lazy"
+                    class="img-cover gallery-2-img"
+                  />
+                </figure>
+              </li>
+
+              <!-- 3 -->
+              <li class="gallery-item gallery-item-3">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 840"
+                >
+                  <img
+                    src="/assets/images/g-3.jpg"
+                    alt="gallery-3"
+                    width="700"
+                    height="840"
+                    loading="lazy"
+                    class="img-cover gallery-3-img"
+                  />
+                </figure>
+              </li>
+
+              <!-- 4 -->
+              <li class="gallery-item gallery-item-4">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 378"
+                >
+                  <img
+                    src="/assets/images/g-4.jpg"
+                    alt="gallery-4"
+                    width="700"
+                    height="378"
+                    loading="lazy"
+                    class="img-cover gallery-4-img"
+                  />
+                </figure>
+              </li>
+
+              <!-- 5 -->
+              <li class="gallery-item gallery-item-5">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 378"
+                >
+                  <img
+                    src="/assets/images/g-5.jpg"
+                    alt="gallery-5"
+                    width="700"
+                    height="378"
+                    loading="lazy"
+                    class="img-cover gallery-5-img"
+                  />
+                </figure>
+              </li>
+
+              <!-- 6 -->
+              <li class="gallery-item gallery-item-6">
+                <figure
+                  class="item-banner img-holder"
+                  style="--width: 700; --height: 378"
+                >
+                  <img
+                    src="/assets/images/g-6.jpg"
+                    alt="gallery-6"
+                    width="700"
+                    height="378"
+                    loading="lazy"
+                    class="img-cover gallery-6-img"
+                  />
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Call To Action Section -->
+        <section class="cta section" aria-label="call-to-action" id="cta">
+          <!-- The <section> element defines the CTA area with an aria-label for accessibility
+               and an ID for linking purposes. -->
+
+          <div class="container">
+            <!-- A container to center and constrain the content width within the section. -->
+
+            <div
+              class="cta-card bg-image"
+              style="background-image: url(/assets/images/cta-bg.jpg)"
+            >
+              <!-- A card element with a background image to create a visually appealing section. -->
+
+              <h2 class="h2 title section-title">
+                Prepare Yourself &amp; Let's Explore The Beauty Of The World
+                <!-- Main heading encouraging users to engage with travel. -->
+
+                <img
+                  src="/assets/images/title-icon.svg"
+                  width="36"
+                  height="36"
+                  loading="lazy"
+                  class="img"
+                  alt="title icon"
+                />
+                <!-- An icon that complements the heading, loaded lazily for better performance. -->
+              </h2>
+
+              <p class="section-text">
+                We are here to help you discover new places, learn about
+                history, and make the most of your travel experience. Contact us
+                today and let's create a memorable and enjoyable trip together.
+                <!-- A descriptive paragraph that outlines the purpose and invitation to the users. -->
+              </p>
+
+              <a href="#" class="btn btn-primary">Contact Us</a>
+              <!-- A call-to-action button that invites users to take the next step, styled as a primary button. -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" aria-label="footer" id="footer">
+          <!-- The <footer> element defines the footer section with an aria-label for accessibility and an ID for linking. -->
+
+          <div class="container">
+            <!-- A container to center and constrain the content width within the footer. -->
+
+            <div class="footer-top">
+              <!-- The top section of the footer that contains branding and navigation links. -->
+
+              <div class="footer-brand">
+                <!-- A section for branding elements like the logo and description. -->
+
+                <a href="#" class="logo">
+                  <img
+                    src="/assets/images/logo.svg"
+                    alt="logo"
+                    width="187"
+                    height="38"
+                    loading="lazy"
+                  />
+                  <!-- Logo image for the travel agency, loaded lazily for performance. -->
+                </a>
+
+                <p class="footer-text">
+                  We are a leading travel agency specializing in luxury
+                  accommodations, unique experiences, and innovative ideas for
+                  your next adventure.
+                  <!-- A brief description of the agency's services. -->
+                </p>
+
+                <ul class="social-list">
+                  <!-- A list of social media links. -->
+
+                  <!-- 1 -->
+                  <li>
+                    <a href="#" class="social-link" target="_blank">
+                      <i class="fa-brands fa-facebook"></i>
+                      <!-- Facebook icon for linking to the agency's Facebook page. -->
+                    </a>
+                  </li>
+
+                  <!-- 2 -->
+                  <li>
+                    <a href="#" class="social-link" target="_blank">
+                      <i class="fa-brands fa-x-twitter"></i>
+                      <!-- Twitter icon for linking to the agency's Twitter page. -->
+                    </a>
+                  </li>
+
+                  <!-- 3 -->
+                  <li>
+                    <a href="#" class="social-link" target="_blank">
+                      <i class="fa-brands fa-instagram"></i>
+                      <!-- Instagram icon for linking to the agency's Instagram page. -->
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="footer-list">
+                <!-- A list of links categorized under "About". -->
+
+                <li>
+                  <p class="list-title">About</p>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> About Us </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Our History </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Careers </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Testimonials </a>
+                </li>
+              </ul>
+
+              <ul class="footer-list">
+                <!-- A list of links categorized under "Services". -->
+
+                <li>
+                  <p class="list-title">Services</p>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Luxury Accommodations </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Unique Experiences </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Innovative Ideas </a>
+                </li>
+              </ul>
+
+              <ul class="footer-list" id="contact">
+                <!-- A list of links categorized under "Help & Support". -->
+
+                <li>
+                  <p class="list-title">Help & Support</p>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Account </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Contact Us </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Support Center </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Feedback </a>
+                </li>
+
+                <li>
+                  <a href="#" class="footer-link"> Accessibility </a>
+                </li>
+              </ul>
+
+              <div class="footer-list">
+                <!-- A section for user interaction and getting in touch. -->
+
+                <p class="list-title">Get in Touch</p>
+
+                <p class="footer-text">
+                  Send us a message and we'll get back to you within 24 hours.
+                  <!-- Encouragement for users to reach out, with a promise of a quick response. -->
+                </p>
+
+                <form class="input-wrapper">
+                  <!-- A form for users to submit their email addresses for contact. -->
+
+                  <input
+                    type="email"
+                    name="email address"
+                    placeholder="Email Address"
+                    autocomplete="off"
+                    required
+                    class="input-field"
+                  />
+                  <!-- Input field for email addresses, marked as required for submission. -->
+
+                  <button
+                    type="submit"
+                    class="input-btn"
+                    aria-label="send a message"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <!-- Submit button with an icon for sending messages. -->
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div class="footer-bottom">
+              <!-- The bottom section of the footer, often for copyright and additional links. -->
+
+              <p class="copyright">
+                &copy; 2024 TravelSphere | All rights reserved.
+                <!-- Copyright notice for the agency. -->
+              </p>
+
+              <ul class="bottom-list">
+                <!-- A list of legal links. -->
+
+                <li>
+                  <a href="#" class="bottom-link"> Privacy Policy </a>
+                  <!-- Link to the privacy policy page. -->
+                </li>
+
+                <li>
+                  <a href="#" class="bottom-link"> Terms & Conditions </a>
+                  <!-- Link to the terms and conditions page. -->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </article>
+    </main>
+
+    <!-- A link that acts as a button to scroll the page back to the top. It uses an icon for visual indication. -->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="fa-solid fa-up-long"></i>
+    </a>
+
+    <!-- ScrollReveal.js for animations on scroll -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- This script enables animations for elements as they enter the viewport, enhancing user experience. -->
+
+    <!-- Custom JavaScript file for additional functionality -->
+    <script src="/assets/js/script.js"></script>
+    <!-- This script likely contains site's custom JavaScript for functionality like handling the scroll-up button behavior. -->
+  </body>
+</html>

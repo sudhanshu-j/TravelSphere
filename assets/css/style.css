@@ -1,0 +1,1344 @@
+/* Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Custom CSS Variables */
+:root {
+  /* COLORS */
+  /* Background colors */
+  --bg-white: #ffffff; /* White background */
+  --bg-black-alpha-20: #00000033; /* Black with 20% opacity */
+  --bg-lavender-blush: #fff5f5; /* Light blush color */
+  --bg-majorelle-blue: #6247fa; /* Majorelle blue */
+  --bg-ocean-blue: #5640d4; /* Ocean blue */
+  --bg-majorelle-blue-alpha-5: #6247fa0d; /* Majorelle blue with 5% opacity */
+  --bg-misty-rose: #ffe5e5; /* Misty rose color */
+  --bg-red-salsa: #f94851; /* Red salsa color */
+  --bg-red-salsa-alpha-5: #f948510d; /* Red salsa with 5% opacity */
+  --bg-english-vermillion: #d43a42; /* English vermillion */
+  --bg-chrome-yellow-alpha-5: #ffaa000d; /* Chrome yellow with 5% opacity */
+  --bg-sunglow-alpha-10: #ffcc001a; /* Sunglow with 10% opacity */
+  --bg-gainsboro: #d9d9d9; /* Gainsboro color */
+
+  /* Text colors */
+  --text-white: #ffffff; /* White text */
+  --text-gunmetal: #152432; /* Gunmetal text color */
+  --text-light-coral: #fc787f; /* Light coral text */
+  --text-granite-gray: #5d6165; /* Granite gray text */
+  --text-majorelle-blue: #6247fa; /* Majorelle blue text */
+  --text-sunglow: #ffcc00; /* Sunglow text color */
+
+  /* Border colors */
+  --border-gainsboro: #d9d8d8; /* Gainsboro for borders */
+
+  /* Font family */
+  --ff-sans: "Open Sans", sans-serif; /* Font family set to Open Sans */
+
+  /* Font sizes */
+  --fontSize-1: 4.2rem; /* Large font size */
+  --fontSize-2: 3.6rem; /* Medium-large font size */
+  --fontSize-3: 2.5rem; /* Medium font size */
+  --fontSize-4: 2.4rem; /* Slightly smaller medium font size */
+  --fontSize-5: 2rem; /* Small-medium font size */
+  --fontSize-6: 1.6rem; /* Default font size */
+  --fontSize-7: 1.5rem; /* Smaller font size */
+
+  /* Font weights */
+  --weight-bold: 700; /* Bold font weight */
+  --weight-semiBold: 600; /* Semi-bold font weight */
+  --weight-medium: 500; /* Medium font weight */
+
+  /* SPACING */
+  --section-spacing: 80px; /* Standard spacing for sections */
+
+  /* Box Shadows */
+  --shadow-1: 0 2px 10px rgba(21, 36, 50, 0.1); /* Light shadow */
+  --shadow-2: 0 5px 10px rgba(98, 71, 250, 0.25); /* Medium shadow with Majorelle blue */
+  --shadow-3: 0 5px 10px rgba(212, 58, 66, 0.25); /* Medium shadow with English vermillion */
+  --shadow-4: 0 30px 50px rgba(212, 58, 66, 0.3); /* Heavy shadow for emphasis */
+
+  /* Border Radius */
+  --radius-pill: 200px; /* Pill-shaped radius */
+  --radius-circle: 50%; /* Perfectly circular radius */
+  --radius-30: 30px; /* Rounded corners */
+  --radius-20: 20px; /* Less rounded corners */
+
+  /* Transitions */
+  --transition-1: 250ms ease; /* Quick transition */
+  --transition-2: 500ms ease; /* Slower transition */
+  --cubic-out: cubic-bezier(
+    0.05,
+    0.83,
+    0.52,
+    0.97
+  ); /* Custom cubic-bezier for smooth transitions */
+}
+
+/* Reset Styles */
+*,
+*::before,
+*::after {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+li {
+  list-style: none; /* Remove bullet points from list items */
+}
+
+a,
+img,
+span,
+button,
+input,
+i {
+  display: block; /* Make these elements block-level */
+}
+
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent element */
+}
+
+img {
+  height: auto; /* Maintain image aspect ratio */
+}
+
+button,
+input {
+  background: none; /* Remove default background */
+  border: none; /* Remove default border */
+  font: inherit; /* Inherit font styles */
+}
+
+input {
+  width: 100%; /* Full width for inputs */
+  outline: none; /* Remove focus outline */
+}
+
+button {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+i {
+  pointer-events: none; /* Disable pointer events for icons */
+}
+
+address {
+  font-style: normal; /* Remove italics from address */
+}
+
+html {
+  font-family: var(--ff-sans); /* Set font family for the entire document */
+  font-size: 10px; /* Base font size for rem calculations */
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+body {
+  background-color: var(--bg-lavender-blush); /* Set background color of body */
+  color: var(--text-granite-gray); /* Set text color */
+  font-size: var(--fontSize-6); /* Set default font size */
+  line-height: 1.6; /* Set line height for better readability */
+}
+
+body.nav-active {
+  overflow: hidden; /* Prevent scrolling when the navigation is active */
+}
+
+/* Reused Styles */
+.container {
+  padding-inline: 16px; /* Horizontal padding for container */
+}
+
+.btn {
+  height: 50px; /* Fixed height for buttons */
+  color: var(--text-white); /* Text color for buttons */
+  padding-inline: 30px; /* Horizontal padding inside buttons */
+  border-radius: var(--radius-pill); /* Rounded corners for buttons */
+  display: flex; /* Flexbox for button layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  gap: 10px; /* Space between icon and text */
+  min-width: max-content; /* Minimum width to fit content */
+  transition: var(--transition-1); /* Smooth transition effect */
+}
+
+.btn-primary {
+  background-color: var(
+    --bg-majorelle-blue
+  ); /* Primary button background color */
+}
+
+.btn-primary:is(:hover, :focus-visible) {
+  background-color: var(--bg-ocean-blue); /* Change color on hover/focus */
+  box-shadow: var(--shadow-2); /* Add shadow effect on hover/focus */
+}
+
+.btn-secondary {
+  background-color: var(--bg-red-salsa); /* Secondary button background color */
+}
+
+.btn-secondary:is(:hover, :focus-visible) {
+  background-color: var(
+    --bg-english-vermillion
+  ); /* Change color on hover/focus */
+  box-shadow: var(--shadow-3); /* Add shadow effect on hover/focus */
+}
+
+.section {
+  padding-block-end: var(--section-spacing); /* Bottom padding for sections */
+}
+
+.bg-img {
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-size: cover; /* Cover the entire area with the background image */
+  background-position: center; /* Center the background image */
+}
+
+title {
+  color: var(--text-gunmetal); /* Text color for titles */
+  font-weight: var(--weight-semiBold); /* Semi-bold weight for titles */
+  line-height: 1.45; /* Line height for readability */
+}
+
+.h1 {
+  font-size: var(--fontSize-1); /* Font size for H1 elements */
+  line-height: 1.2; /* Line height for H1 */
+}
+
+.h2 {
+  font-size: var(--fontSize-2); /* Font size for H2 elements */
+}
+
+.h3 {
+  font-size: var(--fontSize-4); /* Font size for H3 elements */
+}
+
+.img-cover {
+  width: 100%; /* Full width for images */
+  height: 100%; /* Full height for images */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  transition: var(--transition-2); /* Smooth transition for image changes */
+}
+
+.w-100 {
+  width: 100%; /* Full width for elements with this class */
+}
+
+.section-subtitle {
+  font-weight: var(--weight-medium); /* Medium weight for subtitles */
+  color: var(--text-majorelle-blue); /* Color for subtitles */
+  text-transform: uppercase; /* Uppercase text for subtitles */
+}
+
+.section-title {
+  margin-block: 10px; /* Vertical margin for section titles */
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height); /* Maintain specified aspect ratio */
+  background-color: var(
+    --bg-gainsboro
+  ); /* Background color for image holders */
+  overflow: hidden; /* Hide overflow for contained elements */
+}
+
+/* Preloader */
+.preloader {
+  position: fixed; /* Fixed position for preloader */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: var(--bg-lavender-blush); /* Background color */
+  display: grid; /* Use grid for centering content */
+  place-content: center; /* Center content within grid */
+  z-index: 6; /* Layer above most elements */
+  transition: var(--transition-1); /* Transition for removal effect */
+}
+
+.preloader.remove {
+  opacity: 0; /* Fade out opacity */
+  visibility: hidden; /* Hide visibility */
+}
+
+.preloader-img {
+  animation: bounce 0.8s ease-in-out infinite alternate; /* Bouncing animation for preloader image */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10px); /* Start position for bounce */
+  }
+  100% {
+    transform: translateY(0); /* End position for bounce */
+  }
+}
+
+.preloader-inner {
+  position: relative; /* Relative positioning for inner preloader */
+}
+
+.preloader-inner::after {
+  content: ""; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  bottom: -10px; /* Position below the inner preloader */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust centering */
+  width: 80%; /* Width of shadow effect */
+  height: 10px; /* Height of shadow effect */
+  background-color: var(--bg-black-alpha-20); /* Background color for shadow */
+  filter: blur(4px); /* Blur effect */
+  z-index: -1; /* Layer behind the preloader inner */
+  animation: shadow 0.8s ease-in-out infinite alternate; /* Shadow animation */
+}
+
+@keyframes shadow {
+  0% {
+    width: 40%; /* Start width for shadow */
+  }
+  100% {
+    width: 80%; /* End width for shadow */
+  }
+}
+
+/* Header section */
+.header .container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space items evenly between the edges */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.header {
+  padding-block: 30px; /* Vertical padding for the header */
+  position: absolute; /* Position the header at the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  z-index: 4; /* Layer above other elements */
+}
+
+.header.active {
+  position: fixed; /* Fix the header in place when active */
+  background-color: var(--bg-white); /* Set background color when active */
+  box-shadow: var(--shadow-1); /* Add shadow for depth */
+
+  animation: slideIn 0.5s ease forwards; /* Slide in animation on activation */
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%); /* Start above the viewport */
+  }
+  100% {
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+.header .logo .logo-img {
+  width: 160px; /* Fixed width for logo image */
+}
+
+.toggle-btn {
+  font-size: 3rem; /* Large font size for toggle button */
+}
+
+/* Navigation */
+.nav-bar {
+  position: fixed; /* Fixed positioning for navigation */
+  top: 0; /* Align to top */
+  right: -350px; /* Start off-screen to the right */
+  max-width: 350px; /* Maximum width for navigation */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+  background-color: var(--bg-white); /* Background color */
+  padding: 30px 16px; /* Padding inside navigation */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  z-index: 1; /* Layer above other elements */
+  transition: 0.4s var(--cubic-out); /* Transition for showing/hiding */
+  visibility: hidden; /* Start hidden */
+}
+
+.nav-bar.active {
+  visibility: visible; /* Show when active */
+  transform: translateX(-350px); /* Move into view */
+  transition-duration: 0.5s; /* Duration of the transition */
+}
+
+.nav-top {
+  display: flex; /* Use flexbox for top navigation layout */
+  justify-content: space-around; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+}
+
+.nav-top .toggle-btn {
+  margin-right: 18px;
+}
+
+.nav-list {
+  margin-block-start: 50px; /* Top margin for navigation list */
+}
+
+.nav-link {
+  position: relative; /* Position relative for pseudo-element */
+  color: var(--text-gunmetal); /* Text color for links */
+  font-size: var(--fontSize-7); /* Font size for links */
+  font-weight: var(--weight-medium); /* Font weight */
+  padding-block: 8px; /* Vertical padding for links */
+  transition: var(--transition-1); /* Transition for hover effect */
+}
+
+.nav-link::before {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Center vertically */
+  left: -10px; /* Position to the left */
+  transform: translateY(-50%); /* Center adjustment */
+  width: 3px; /* Width of the line */
+  height: 10px; /* Height of the line */
+  background-color: var(--bg-majorelle-blue); /* Color of the line */
+  border-radius: 6px; /* Rounded corners for the line */
+  opacity: 0; /* Start invisible */
+  transition: var(--transition-1); /* Transition for opacity change */
+}
+
+.nav-link:is(:hover, :focus-visible, .active)::before {
+  opacity: 1; /* Show line on hover, focus, or when active */
+}
+
+.nav-link:is(:hover, :focus-visible, .active) {
+  transform: translateX(10px); /* Move link to the right on hover/focus */
+}
+
+.header-action {
+  margin-block-start: auto; /* Push to the bottom */
+  padding-block-start: 20px; /* Top padding */
+  border-block-start: 1px solid var(--bg-gainsboro); /* Top border */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-around; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+}
+
+.login-btn {
+  color: var(--text-gunmetal); /* Text color for login button */
+  font-size: var(--fontSize-7); /* Font size for button */
+  font-weight: var(--weight-medium); /* Font weight */
+  transition: var(--transition-1); /* Transition for hover effect */
+}
+
+.login-btn:is(:hover, :focus-visible) {
+  opacity: 0.8; /* Slightly transparent on hover/focus */
+}
+
+.overlay {
+  position: fixed; /* Fixed positioning for overlay */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  background-color: var(--bg-white); /* Background color for overlay */
+  opacity: 0; /* Start invisible */
+  visibility: hidden; /* Start hidden */
+  transition: var(--transition-1); /* Transition for visibility change */
+}
+
+.overlay.active {
+  opacity: 0.5; /* Semi-transparent when active */
+  visibility: visible; /* Show when active */
+}
+
+/* Hero Section */
+
+.section.hero {
+  background-image: url("/assets/images/hero-bg.jpg"); /* Background image */
+  background-size: cover; /* Full image size */
+  background-position: center; /* Center image */
+  padding-block-start: 120px; /* Add space at the top of the hero section */
+}
+
+.hero {
+  padding-block-start: 150px; /* Add space at the top of the hero section */
+}
+
+.hero .container {
+  display: grid; /* Use grid layout for hero content */
+  gap: 50px; /* Space between grid items */
+}
+
+.hero-subtitle {
+  background-color: var(--bg-misty-rose); /* Background color for subtitle */
+  color: var(--text-light-coral); /* Text color */
+  font-size: var(--fontSize-7); /* Font size */
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Space between items */
+  max-width: max-content; /* Limit width to content size */
+  padding: 8px 20px; /* Padding around the subtitle */
+  border-radius: var(--radius-pill); /* Rounded corners */
+}
+
+.hero-title {
+  margin-block: 20px; /* Vertical margin for title */
+}
+
+.hero-text {
+  margin-block-end: 30px; /* Space below the hero text */
+}
+
+.hero .btn-secondary {
+  margin-block-end: 20px; /* Space below secondary button */
+}
+
+.hero-btn {
+  color: var(--text-gunmetal); /* Button text color */
+  font-weight: var(--weight-medium); /* Font weight */
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Space between items */
+  transition: var(--transition-1); /* Transition for hover effects */
+}
+
+.hero-btn .btn-img {
+  position: relative; /* Position relative for inner elements */
+  width: 60px; /* Fixed width for button image */
+  height: 60px; /* Fixed height for button image */
+  background-color: var(--bg-gainsboro); /* Background color */
+  border-radius: var(--radius-circle); /* Circular shape */
+  box-shadow: var(--shadow-1); /* Add shadow for depth */
+}
+
+.hero-btn .img-cover {
+  border-radius: inherit; /* Inherit border-radius from parent */
+}
+
+.hero-btn i {
+  position: absolute; /* Position icon absolutely */
+  top: 50%; /* Center vertically */
+  right: 0; /* Align to the right */
+  transform: translate(50%, -50%); /* Adjust position */
+  background-color: var(--bg-white); /* Background color */
+  padding: 10px; /* Padding around icon */
+  border-radius: var(--radius-circle); /* Circular shape */
+  box-shadow: var(--shadow-1); /* Add shadow */
+}
+
+.hero-btn:is(:hover, :focus-visible) {
+  color: var(--text-majorelle-blue); /* Change color on hover/focus */
+}
+
+/* Services Section */
+
+.service .container {
+  display: grid; /* Use grid layout for services */
+  gap: 25px; /* Space between service items */
+}
+
+.service-card:nth-child(2) {
+  background-color: var(
+    --bg-chrome-yellow-alpha-5
+  ); /* Specific background for second card */
+}
+
+.service-card:nth-child(3) {
+  background-color: var(
+    --bg-red-salsa-alpha-5
+  ); /* Specific background for third card */
+}
+
+.service-card:nth-child(4) {
+  background-color: var(
+    --bg-majorelle-blue-alpha-5
+  ); /* Specific background for fourth card */
+}
+
+.service-card {
+  padding: 25px 20px; /* Padding inside service card */
+  border-radius: var(--radius-20); /* Rounded corners */
+}
+
+.service-card .card-title {
+  margin-block: 10px 5px; /* Vertical margin for card title */
+}
+
+/* Destinations Section */
+
+.destinations .section-title {
+  margin-block-end: 40px; /* Space below section title */
+}
+
+.destinations-list {
+  display: grid; /* Use grid layout for destinations */
+  gap: 30px; /* Space between destination cards */
+}
+
+.destinations-card .card-banner {
+  position: relative; /* Position relative for card banner */
+  border-radius: var(--radius-30); /* Rounded corners */
+}
+
+.destinations-card:is(:hover, :focus-within) .img-cover {
+  transform: scale(1.05); /* Scale up on hover/focus */
+}
+
+.destinations-card .card-price {
+  position: absolute; /* Position price absolutely */
+  top: 20px; /* Distance from top */
+  right: 20px; /* Distance from right */
+  background-color: var(--bg-white); /* Background color */
+  color: var(--text-majorelle-blue); /* Text color */
+  font-weight: var(--weight-bold); /* Bold font weight */
+  font-size: 1.8rem; /* Font size */
+  line-height: 1.45; /* Line height */
+  padding: 5px 15px; /* Padding around price */
+  border-radius: var(--radius-pill); /* Rounded corners */
+}
+
+.destinations-card .card-title {
+  margin-block: 15px 5px; /* Vertical margin for card title */
+  transition: var(--transition-1); /* Transition for hover effects */
+}
+
+.destinations-card .card-title:is(:hover, :focus-visible) {
+  color: var(--text-majorelle-blue); /* Change color on hover/focus */
+}
+
+.destinations-card :is(.card-rating, span) {
+  display: flex; /* Flexbox for rating and span */
+  align-items: center; /* Center items vertically */
+}
+
+.destinations-card .card-rating {
+  margin-block-start: 10px; /* Space above rating */
+  gap: 10px; /* Space between rating items */
+}
+
+.destinations-card .card-rating .span {
+  background-color: var(--bg-sunglow-alpha-10); /* Background for rating span */
+  gap: 5px; /* Space between span items */
+  padding: 4px 12px; /* Padding around span */
+  border-radius: var(--radius-pill); /* Rounded corners */
+}
+
+.destinations-card .card-rating i {
+  color: var(--text-sunglow); /* Color for rating icons */
+}
+
+.destinations .btn {
+  margin-inline: auto; /* Center the button horizontally */
+  margin-block-start: 40px; /* Space above the button */
+}
+
+/* Experience Section */
+.experience .container {
+  display: grid; /* Use grid layout for experience section */
+  gap: 50px; /* Space between items */
+}
+
+.experience-banner {
+  position: relative; /* Relative positioning for inner elements */
+}
+
+.experience .section-text {
+  margin-block-end: 20px; /* Space below section text */
+}
+
+.experience-item {
+  display: flex; /* Flexbox for item layout */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Space between item elements */
+  margin-block-start: 15px; /* Space above each item */
+}
+
+.experience-item .item-title {
+  color: var(--text-majorelle-blue); /* Title color */
+  font-size: 3.6rem; /* Title font size */
+  font-weight: var(--weight-bold); /* Bold font weight */
+}
+
+.experience-shape {
+  position: absolute; /* Position shape absolutely within parent */
+  top: 50%; /* Center vertically */
+  left: -10px; /* Offset from the left */
+  width: 25%; /* Width of the shape */
+  filter: drop-shadow(var(--shadow-4)); /* Add shadow effect */
+}
+
+/* Gallery Section */
+.gallery .section-title {
+  margin-block-end: 40px; /* Space below section title */
+}
+
+.gallery-list {
+  display: grid; /* Use grid layout for gallery items */
+  gap: 15px; /* Space between gallery items */
+}
+
+.gallery .item-banner {
+  border-radius: var(--radius-30); /* Rounded corners for gallery item */
+}
+
+/* Call To Action Section  */
+.cta-card {
+  background-color: var(--bg-misty-rose); /* Background color for CTA card */
+  padding: 60px 20px; /* Padding inside the card */
+  text-align: center; /* Center text */
+  border-radius: var(--radius-30); /* Rounded corners */
+}
+
+.cta .section-title .img {
+  display: inline-block; /* Inline display for images within titles */
+}
+
+.cta .section-title {
+  margin-block: 0 20px; /* Margin around section title */
+}
+
+.cta .btn {
+  margin-inline: auto; /* Center button horizontally */
+  margin-block-start: 20px; /* Space above the button */
+}
+
+/* Footer Section */
+.footer-top {
+  display: grid; /* Use grid layout for footer top */
+  gap: 40px; /* Space between footer items */
+  padding-block: 60px; /* Padding for top footer */
+}
+
+.footer .logo img {
+  width: 180px; /* Width for footer logo */
+}
+
+.footer-brand .footer-text {
+  margin-block: 20px; /* Space around footer text */
+}
+
+.social-list {
+  display: flex; /* Flexbox for social icons */
+  align-items: center; /* Center icons vertically */
+  gap: 10px; /* Space between icons */
+}
+
+.social-link {
+  color: var(--text-majorelle-blue); /* Social link color */
+  font-size: 2rem; /* Font size */
+  padding: 5px 9px; /* Padding for links */
+  border-radius: var(--radius-pill); /* Rounded corners */
+  transition: var(--transition-1); /* Transition for hover effects */
+}
+
+.social-link:is(:hover, :focus-visible) {
+  color: var(--text-white); /* Change color on hover/focus */
+  background-color: var(--bg-majorelle-blue); /* Background on hover/focus */
+}
+
+.list-title {
+  color: var(--text-gunmetal); /* Title color */
+  font-size: var(--fontSize-5); /* Font size */
+  font-weight: var(--weight-semiBold); /* Semi-bold font weight */
+  margin-block-end: 15px; /* Space below list title */
+}
+
+.footer-link {
+  margin-block-start: 10px; /* Space above footer link */
+}
+
+.footer-link:is(:hover, :focus-visible) {
+  text-decoration: underline; /* Underline on hover/focus */
+}
+
+.footer-list .footer-text {
+  margin-block-end: 15px; /* Space below footer text */
+}
+
+.input-field {
+  height: 55px; /* Height of input field */
+  padding-inline: 25px 60px; /* Horizontal padding */
+  border: 1px solid var(--border-gainsboro); /* Border color */
+  color: var(--text-gunmetal); /* Text color */
+  border-radius: var(--radius-pill); /* Rounded corners */
+}
+
+.input-wrapper {
+  position: relative; /* Position relative for absolute child elements */
+}
+
+.input-field:focus {
+  border-color: var(--bg-majorelle-blue); /* Change border color on focus */
+}
+
+.input-btn {
+  width: 45px; /* Width of input button */
+  height: 45px; /* Height of input button */
+  background-color: var(--bg-majorelle-blue); /* Background color */
+  font-size: 2rem; /* Font size */
+  display: grid; /* Grid layout for button */
+  place-items: center; /* Center items */
+  border-radius: var(--radius-circle); /* Circular shape */
+  position: absolute; /* Position absolute within parent */
+  top: 5px; /* Offset from top */
+  right: 5px; /* Offset from right */
+  bottom: 5px; /* Offset from bottom */
+  transition: var(--transition-1); /* Transition for hover effects */
+  color: var(--text-white); /* Text color */
+}
+
+.input-btn i {
+  transform: translateX(-2px) rotate(45deg); /* Rotate icon */
+}
+
+.input-btn:is(:hover, :focus-visible) {
+  background-color: var(--bg-ocean-blue); /* Change background on hover/focus */
+}
+
+.footer-bottom {
+  padding-block: 30px; /* Padding for bottom footer */
+  border-block-start: 1px solid var(--border-gainsboro); /* Top border */
+}
+
+.copyright {
+  margin-block-end: 20px; /* Space below copyright text */
+}
+
+.bottom-link:is(:hover, :focus-visible) {
+  text-decoration: underline; /* Underline on hover/focus */
+}
+
+/* ScrollUp Btn */
+.scrollup {
+  position: fixed; /* Fixed position on screen */
+  right: 1rem; /* Offset from right */
+  bottom: -30%; /* Off-screen initially */
+  background-color: var(--bg-majorelle-blue); /* Background color */
+  backdrop-filter: blur(16px); /* Blur effect */
+  -webkit-backdrop-filter: blur(16px); /* Webkit support for blur */
+  display: inline-flex; /* Inline-flex for button */
+  padding: 10px; /* Padding for scroll up button */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 1.15rem; /* Font size */
+  color: #000; /* Text color */
+  z-index: 10; /* Stack above other elements */
+  transition: 0.6s; /* Transition duration */
+}
+
+.scrollup i {
+  font-size: 1.8rem; /* Icon font size */
+}
+
+.scrollup:hover {
+  transform: translateY(-0.25rem); /* Lift effect on hover */
+  background-color: var(--bg-ocean-blue); /* Change background on hover */
+}
+
+/* Show Scroll Up */
+.show-scroll {
+  bottom: 3rem; /* Position on screen when shown */
+}
+
+/* Media Queries Breakdown */
+
+/* 1. Basic Structure for Smaller Screens (Default) */
+/* No specific styles defined; styles are applied by default for screens smaller than 580px. */
+
+/* 2. Screens Larger than 580px */
+@media (min-width: 580px) {
+  /* Styles for screens larger than 580px */
+
+  .container {
+    max-width: 540px; /* Limit container width */
+    width: 100%; /* Full width */
+    margin-inline: auto; /* Center container */
+  }
+
+  /* Header styles */
+  .nav-bar {
+    padding-inline: 40px; /* Side padding for navbar */
+    padding-block-start: 40px; /* Top padding for navbar */
+  }
+
+  .nav-top {
+    display: flex; /* Flexbox layout for top navigation */
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+  }
+
+  /* Hero section styles */
+  .hero-text {
+    min-width: 42ch; /* Minimum width for text */
+  }
+
+  .hero .wrapper {
+    display: flex; /* Flexbox layout */
+    gap: 30px; /* Space between items */
+    align-items: center; /* Center items vertically */
+  }
+
+  .hero .btn {
+    margin-block-end: 0; /* Remove bottom margin from button */
+  }
+
+  /* Service section styles */
+  .service .container {
+    grid-template-columns: 1fr 1fr; /* Two-column grid layout */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  /* Destinations section styles */
+  .destinations-list {
+    grid-template-columns: 1fr 1fr; /* Two-column grid for destinations */
+  }
+
+  .destinations .btn {
+    width: 20%; /* Set button width */
+  }
+
+  /* Footer styles */
+  .bottom-list {
+    display: flex; /* Flexbox layout for footer items */
+    gap: 30px; /* Space between footer items */
+  }
+}
+
+/* 3. Screens Larger than 768px */
+@media (min-width: 768px) {
+  /* Styles for screens larger than 768px */
+
+  :root {
+    /* Font size definitions */
+    --fontSize-1: 4.8rem;
+    --fontSize-2: 4rem;
+    --fontSize-3: 2.8rem;
+    --fontSize-4: 2.6rem;
+    --fontSize-5: 2.2rem;
+    --fontSize-6: 1.8rem;
+    --fontSize-7: 1.6rem;
+    /* Section spacing */
+    --section-spacing: 120px;
+  }
+
+  .container {
+    min-width: 720px; /* Minimum width for container */
+  }
+
+  .btn {
+    height: 60px; /* Button height */
+    padding-inline: 40px; /* Horizontal padding for buttons */
+  }
+
+  /* Center section titles in destinations and gallery */
+  :is(.destinations, .gallery) :is(.section-subtitle, .section-title) {
+    text-align: center;
+  }
+
+  /* Preloader styles */
+  .preloader .img {
+    width: 80px; /* Width for preloader image */
+  }
+
+  /* Hero section styles */
+  .hero {
+    padding-block-start: 180px; /* Top padding for hero */
+  }
+
+  .hero-subtitle {
+    --fontSize-7: 1.8rem; /* Subtitle font size */
+    padding: 10px 30px; /* Padding for subtitle */
+  }
+
+  .hero-btn {
+    gap: 32px; /* Space between hero buttons */
+  }
+
+  .hero-btn .btn-img {
+    width: 80px; /* Size for button images */
+    height: 80px;
+  }
+
+  .hero-btn i {
+    padding: 12px; /* Icon padding in buttons */
+  }
+
+  .hero-banner {
+    min-width: 550px; /* Minimum width for hero banner */
+    margin-inline: auto; /* Center banner */
+  }
+
+  /* Service section styles */
+  .service .container {
+    gap: 35px; /* Gap between service items */
+  }
+
+  .service-card {
+    padding: 40px 30px; /* Padding for service cards */
+  }
+
+  .service-card .card-title {
+    margin-block: 20px 10px; /* Margin for card titles */
+  }
+
+  /* Destinations section styles */
+  .destinations .section-title {
+    margin-block-end: 65px; /* Bottom margin for section title */
+  }
+
+  .destinations-list {
+    gap: 50px 35px; /* Gap between destination items */
+  }
+
+  .destinations-card .card-title {
+    margin-block-start: 25px; /* Top margin for card titles */
+  }
+
+  .destinations .btn {
+    margin-block-start: 60px; /* Top margin for destination button */
+    width: 20%; /* Button width */
+  }
+
+  /* Experience section styles */
+  .experience .section-text {
+    min-width: 600px; /* Minimum width for experience text */
+  }
+
+  .experience-list {
+    display: flex; /* Flex layout for experience items */
+    align-items: center; /* Center items vertically */
+    gap: 30px; /* Space between experience items */
+  }
+
+  .experience-item {
+    gap: 15px; /* Gap between experience item elements */
+  }
+
+  .experience-item .item-title {
+    font-size: 4rem; /* Font size for experience titles */
+  }
+
+  .experience-banner {
+    min-width: 550px; /* Minimum width for experience banner */
+    margin-inline: auto; /* Center banner */
+  }
+
+  /* Gallery section styles */
+  .gallery .section-title {
+    margin-block-end: 65px; /* Bottom margin for gallery title */
+  }
+
+  .gallery-list {
+    grid-template-columns: 1fr 1fr; /* Two-column grid for gallery */
+    gap: 25px; /* Gap between gallery items */
+  }
+
+  .gallery-item:nth-child(n + 3) {
+    grid-column: 1 / 3; /* Span the first two columns for certain items */
+  }
+
+  /* Call to Action section styles */
+  .cta-card {
+    padding: 80px 60px; /* Padding for CTA card */
+  }
+
+  .cta .btn {
+    margin-block-start: 30px; /* Top margin for CTA button */
+    width: 20%; /* Button width */
+  }
+
+  /* Footer styles */
+  .footer-top {
+    grid-template-columns: 1fr 1fr; /* Two-column layout for footer */
+  }
+
+  .footer-bottom {
+    display: flex; /* Flex layout for footer items */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+  }
+
+  .copyright {
+    margin-block-end: 0; /* Remove bottom margin for copyright text */
+  }
+}
+
+/* 4. Screens Larger than 1200px */
+@media (min-width: 995px) {
+  /* Styles for screens larger than 995px */
+
+  .container {
+    min-width: 950px; /* Minimum width for the container */
+  }
+
+  /* Header styles */
+  .toggle-btn,
+  .nav-top,
+  .overlay {
+    display: none; /* Hide mobile toggle elements */
+  }
+
+  .nav-bar,
+  .nav-bar.active {
+    all: unset; /* Reset styles */
+    display: flex; /* Use flexbox for navigation */
+    align-items: center; /* Center items vertically */
+    flex-grow: 1; /* Allow nav bar to grow */
+  }
+
+  .nav-list {
+    margin-block-start: 0; /* Remove top margin */
+    display: flex; /* Use flex layout */
+    gap: 30px; /* Space between nav items */
+    list-style-type: none; /* Remove list bullets */
+    margin-inline: auto; /* Center nav list */
+  }
+
+  .nav-link:is(:hover, :focus-visible, .active) {
+    transform: unset; /* Remove transformations on hover/focus */
+  }
+
+  .nav-link::before {
+    width: 10px; /* Width for nav link indicator */
+    height: 3px; /* Height for nav link indicator */
+    top: auto; /* Reset top positioning */
+    bottom: 0; /* Align to bottom */
+    left: 50px; /* Position left */
+    transform: translateX(-50%); /* Center indicator */
+  }
+
+  .header-action {
+    border: none; /* Remove border */
+    padding-block-start: 0; /* Remove top padding */
+    gap: 30px; /* Space between header actions */
+  }
+
+  .header.active {
+    padding-block: 15px; /* Padding when header is active */
+  }
+
+  .header-action .btn {
+    padding-inline: 20px; /* Horizontal padding for buttons */
+    height: 40px; /* Set button height */
+  }
+
+  /* Hero section styles */
+  .hero .container {
+    grid-template-columns: 0.8fr 1fr; /* Adjust grid for hero */
+    gap: 0; /* No gap between hero items */
+    align-items: center; /* Center items vertically */
+  }
+
+  .hero .wrapper {
+    flex-wrap: wrap; /* Allow wrapping in hero */
+  }
+
+  .hero-banner {
+    min-width: unset; /* Reset minimum width for banner */
+  }
+
+  /* Service section styles */
+  .service .title-wrapper {
+    padding-inline-end: 100px; /* Right padding for title */
+  }
+
+  /* Destinations section styles */
+  .destinations-list {
+    grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+  }
+
+  /* Experience section styles */
+  .experience .container {
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    align-items: center; /* Center items vertically */
+    gap: 80px; /* Space between experience items */
+  }
+
+  .experience-content {
+    order: 1; /* Ensure content appears first */
+  }
+
+  .experience-banner {
+    min-width: unset; /* Reset minimum width for banner */
+  }
+
+  .experience-list {
+    flex-wrap: wrap; /* Allow wrapping of experience items */
+  }
+
+  .experience-item {
+    margin-block-start: 0; /* Remove top margin */
+    flex-direction: column; /* Stack items vertically */
+    gap: 0; /* No gap between item elements */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  /* Gallery section styles */
+  .gallery-list {
+    grid-template-columns: repeat(6, 1fr); /* Six-column grid */
+  }
+
+  .gallery-item:nth-child(n + 3) {
+    grid-column: auto; /* Reset column for later items */
+  }
+
+  .gallery-item:nth-child(3) {
+    grid-column: 3 / 5; /* Span columns for specific item */
+    grid-row: 1 / 3; /* Span rows for specific item */
+  }
+
+  .gallery-item:nth-child(n + 4) {
+    grid-column: span 2; /* Span two columns for later items */
+  }
+
+  .gallery .item-banner {
+    aspect-ratio: unset; /* Reset aspect ratio */
+    width: 100%; /* Full width for item banner */
+    height: 100%; /* Full height for item banner */
+  }
+
+  /* Call to Action section styles */
+  .cta .section-title {
+    min-width: 25ch; /* Minimum width for CTA title */
+    margin-inline: auto; /* Center the title */
+  }
+}
+
+/* 5. Screens Larger than 1200px */
+@media (min-width: 1200px) {
+  /* Styles for screens larger than 1200px */
+
+  :root {
+    --fontSize-1: 6.4rem; /* Font size for main titles */
+    --fontSize-2: 4.8rem; /* Font size for secondary titles */
+    --fontSize-3: 3rem; /* Font size for other text elements */
+  }
+
+  .container {
+    min-width: 1150px; /* Minimum width for container */
+  }
+
+  /* Header styles */
+  .header .logo img {
+    width: 180px; /* Fixed width for logo */
+  }
+
+  .nav-list {
+    gap: 50px; /* Space between navigation items */
+  }
+
+  .header-action {
+    gap: 40px; /* Space between header action items */
+  }
+
+  /* Hero section styles */
+  .hero-title {
+    margin-block: 30px; /* Vertical margin for hero title */
+  }
+
+  .hero-text {
+    margin-block-end: 50px; /* Bottom margin for hero text */
+  }
+
+  /* Service section styles */
+  .service .container {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Three-column layout for services */
+  }
+
+  .service .title-wrapper {
+    grid-column: span 3; /* Title spans all columns */
+  }
+
+  /* Destinations section styles */
+  .destinations-card .card-price {
+    font-size: 2rem; /* Font size for destination price */
+    padding: 8px 20px; /* Padding for price card */
+  }
+
+  .destinations-card .card-title {
+    margin-block: 30px 10px; /* Margin for card title */
+  }
+
+  .destinations-card .card-rating {
+    margin-block-start: 15px; /* Margin before card rating */
+  }
+
+  /* Experience section styles */
+  .experience .section-title {
+    margin-block: 30px 40px; /* Margin for experience section title */
+  }
+
+  .experience-list {
+    gap: 50px; /* Space between experience items */
+  }
+
+  /* Call to Action (CTA) styles */
+  .cta-card {
+    padding-block: 120px; /* Vertical padding for CTA card */
+  }
+
+  /* Footer styles */
+  .footer-top {
+    grid-template-columns: 1fr 0.5fr 0.6fr 0.6fr 1fr; /* Grid layout for footer top */
+    gap: 60px; /* Space between footer columns */
+  }
+
+  .footer-brand .footer-text {
+    margin-block: 35px 30px; /* Margin for footer brand text */
+  }
+
+  .list-title {
+    margin-block-end: 25px; /* Margin at the bottom of list titles */
+  }
+
+  .bottom-list {
+    gap: 40px; /* Space between items in the bottom list */
+  }
+}
+
+/* 6. Screens Larger than 1400px */
+@media (min-width: 1400px) {
+  /* Styles for screens larger than 1400px */
+
+  :root {
+    --fontSize-1: 7.2rem; /* Increased font size for main titles */
+  }
+
+  .container {
+    min-width: 1350px; /* Minimum width for container */
+  }
+
+  /* Header styles */
+  .nav-list {
+    gap: 70px; /* Increased space between navigation items */
+  }
+
+  /* Services section styles */
+  .service .section-title {
+    margin-block-end: 20px; /* Margin below section title */
+  }
+
+  .service .title-wrapper {
+    grid-column: auto; /* Allow title wrapper to occupy auto width */
+    padding-inline-end: 0; /* Remove right padding */
+  }
+
+  .service .container {
+    grid-template-columns: 1fr repeat(3, 0.9fr); /* Three columns with varying widths */
+    gap: 50px; /* Space between service items */
+  }
+
+  .service-card:nth-child(3) {
+    margin-block-start: 80px; /* Top margin for the third service card */
+  }
+
+  /* Destinations section styles */
+  .destinations-list {
+    gap: 50px; /* Space between destination items */
+  }
+
+  /* Footer styles */
+  .footer-top {
+    padding-block-end: 80px; /* Bottom padding for footer top */
+  }
+}
