@@ -78,7 +78,7 @@ Check out the live version of TravelSphere: [Live Demo URL](#)
 ## Screenshots
 
 ### Hero Section
-![Hero Section](images/hero-section.png)
+![Hero Section]([images/hero-section.png](https://github.com/user-attachments/assets/8af2419f-6ee6-464d-979c-2f9f7020fce6))
 
 ### Services Section
 ![Services Section](images/services-section.png)
@@ -88,8 +88,6 @@ Check out the live version of TravelSphere: [Live Demo URL](#)
 
 ### Photo Gallery
 ![Photo Gallery](images/photo-gallery.png)
-
-> **Note:** Replace these links with actual screenshot images stored in the project’s images directory.
 
 ## Installation
 
@@ -103,3 +101,46 @@ To install the project, follow these steps:
     cd TravelSphere
   
 5. Open `index.html` in your browser to view the website.
+
+## Usage
+
+- **Scroll to Top**: Click the button on the bottom right corner to scroll to the top.
+
+- **Hamburger Menu**: On mobile, click the menu icon to view navigation options.
+
+- **Scroll Animations**: Scroll to see animations on each section.
+
+## Responsive Design
+
+TravelSphere is optimized for desktop, tablet, and mobile devices, providing a seamless experience across different screen sizes.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature/YourFeatureName
+    ```
+3. Commit your changes:
+    ```bash
+    git commit -m 'Add YourFeatureName'
+    ```
+4. Push to the branch:
+    ```bash
+    git push origin feature/YourFeatureName
+    ```
+5. Open a pull request.
+
+## Acknowledgments
+
+- **ScrollReveal** for enabling smooth scrolling animations.
+
+- Various web design resources for inspiration on responsive and interactive layouts.
+
+## Contact
+
+- **GitHub:** [Sudhanshu Jha](https://github.com/sudhanshu-j)
+
+- **Gmail:** [Sudhanshu Jha](sudhanshu164@gmail.com)
+
+Enjoy exploring new horizons with TravelSphere!
