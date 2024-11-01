@@ -369,13 +369,10 @@ title {
 
 .nav-top {
   display: flex; /* Use flexbox for top navigation layout */
-  justify-content: space-around; /* Space items evenly */
+  justify-content: space-between; /* Space items evenly */
   align-items: center; /* Center items vertically */
 }
 
-.nav-top .toggle-btn {
-  margin-right: 18px;
-}
 
 .nav-list {
   margin-block-start: 50px; /* Top margin for navigation list */
