@@ -40,8 +40,6 @@
 
 - [Contributing](#contributing)
 
-- [License](#license)
-
 - [Acknowledgments](#acknowledgments)
 ---
 
@@ -62,3 +60,46 @@ TravelSphere/
 │   └── ...               # Additional images for gallery and sections
 └── README.md             # README file
 ```
+
+## Technologies Used
+
+- **HTML**: Structure and layout.
+
+- **CSS**: Styling and animations.
+
+- **JavaScript**: Functional interactivity, scroll-to-top button, and hamburger menu.
+
+- **ScrollReveal**: Library for scrolling animations.
+
+## Live Demo
+
+Check out the live version of TravelSphere: [Live Demo URL](#)
+
+## Screenshots
+
+### Hero Section
+![Hero Section](images/hero-section.png)
+
+### Services Section
+![Services Section](images/services-section.png)
+
+### Experience Section
+![Experience Section](images/experience-section.png)
+
+### Photo Gallery
+![Photo Gallery](images/photo-gallery.png)
+
+> **Note:** Replace these links with actual screenshot images stored in the project’s images directory.
+
+## Installation
+
+To install the project, follow these steps:
+1. Clone the repository:
+   ```bash
+  git clone https://github.com/your-username/travelsphere.git
+
+2. Open the project folder:
+    ```bash
+  cd TravelSphere
+    ```
+3. Open `index.html` in your browser to view the website.
