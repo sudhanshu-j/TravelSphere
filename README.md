@@ -73,7 +73,7 @@ TravelSphere/
 
 ## Live Demo
 
-Check out the live version of TravelSphere: [Live Demo URL](#)
+Check out the live version of TravelSphere: [Live Demo URL](https://travelspheree.netlify.app/)
 
 ## Screenshots
 
