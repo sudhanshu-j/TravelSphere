@@ -48,8 +48,7 @@
 ## File Structure
 
 Here is an overview of the project's file structure:
-
-```plaintext
+```
 TravelSphere/
 ├── index.html            # Main HTML file
 ├── css/
@@ -62,5 +61,4 @@ TravelSphere/
 │   ├── gallery1.jpg      # Gallery images
 │   └── ...               # Additional images for gallery and sections
 └── README.md             # README file
-
-
+```
