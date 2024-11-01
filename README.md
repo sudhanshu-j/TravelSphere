@@ -78,7 +78,7 @@ Check out the live version of TravelSphere: [Live Demo URL](#)
 ## Screenshots
 
 ### Hero Section
-![Hero Section]([assets/ScreenShots/home-section.png])
+![Hero Section]([assets/ScreenShots/hero-section.png])
 
 ### Services Section
 ![Services Section](images/services-section.png)
